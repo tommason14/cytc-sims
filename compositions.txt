@@ -1,0 +1,24 @@
+[Ch][OAc]
+   10 wt % -> Add 452 water molecules and 450 IPs
+   20 wt % -> Add 905 water molecules and 400 IPs
+   30 wt % -> Add 1358 water molecules and 350 IPs
+   40 wt % -> Add 1811 water molecules and 300 IPs
+   50 wt % -> Add 2264 water molecules and 250 IPs
+[Ch][DHP]
+   10 wt % -> Add 558 water molecules and 450 IPs
+   20 wt % -> Add 1116 water molecules and 400 IPs
+   30 wt % -> Add 1674 water molecules and 350 IPs
+   40 wt % -> Add 2232 water molecules and 300 IPs
+   50 wt % -> Add 2790 water molecules and 250 IPs
+[Ch][DHC]
+   10 wt % -> Add 819 water molecules and 450 IPs
+   20 wt % -> Add 1638 water molecules and 400 IPs
+   30 wt % -> Add 2458 water molecules and 350 IPs
+   40 wt % -> Add 3277 water molecules and 300 IPs
+   50 wt % -> Add 4096 water molecules and 251 IPs
+[Ch][DBP]
+   10 wt % -> Add 869 water molecules and 450 IPs
+   20 wt % -> Add 1739 water molecules and 400 IPs
+   30 wt % -> Add 2608 water molecules and 350 IPs
+   40 wt % -> Add 3478 water molecules and 300 IPs
+   50 wt % -> Add 4347 water molecules and 250 IPs

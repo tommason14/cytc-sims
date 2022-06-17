@@ -1,0 +1,32 @@
+#!/bin/bash
+#PBS -P k96
+#PBS -N cyt-c-ch-dhp-20-wtperc-run-1
+#PBS -q gpuvolta
+#PBS -l walltime=24:00:00
+#PBS -l jobfs=100GB
+#PBS -l storage=scratch/k96+gdata/k96
+#PBS -j oe
+#PBS -l mem=48GB
+#PBS -l ncpus=12
+#PBS -l ngpus=1
+#PBS -l wd
+
+module load openmm/7.4.2
+
+base="$(dirname $(pwd))"
+gro="$base/pack.gro"
+top="$base/topol.top"
+
+cytc="ACE ALA ARG ASN ASP CYS GLN GLU GLY HEM HIS ILE LEU LYS MET PHE PRO THR TRP TYR VAL"
+
+mkdir npt
+cd npt
+omm_run_gmx.py --gro $gro --top $top -t 300 -p 1 -dt 2 -n 500_000 -r ${cytc[@]} -min >& restrained_npt.log
+[[ -f cpt.cpt_500000 ]] && omm_run_gmx.py --gro $gro --top $top -t 300 -p 1 -dt 2 -n 4_500_000 --chk cpt.cpt_500000 >& npt.log
+
+if [[ -f cpt.cpt_5000000 ]]
+then
+  mkdir ../nvt
+  cd ../nvt
+  omm_run_gmx.py --gro $gro --top $top -t 300 -dt 2 -n 100_000_000 --chk ../npt/cpt.cpt_5000000 >& nvt.log
+fi

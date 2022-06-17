@@ -1,0 +1,47 @@
+;
+;	File 'topol.top' was generated
+;	By user: _spotlight (290302666)
+;	On host: MU00151959X
+;	At date: Fri Oct  9 14:25:51 2020
+;
+;	This is a standalone topology file
+;
+;	Created by:
+;	                :-) GROMACS - gmx pdb2gmx, 2020.3-MODIFIED (-:
+;	
+;	Executable:   /usr/local/bin/../Cellar/gromacs/2020.3/bin/gmx
+;	Data prefix:  /usr/local/bin/../Cellar/gromacs/2020.3
+;	Working dir:  /Users/tmas0023/Documents/repos/hydrated_ils/hydrated_il_MD/gromacs-cytc/ionic-liquid/cgenff/protein_and_hydrated_il
+;	Command line:
+;	  gmx pdb2gmx -f 1hrc_clean.pdb -o 1hrc_charmm36.gro -ignh -ter
+;	Force field was read from current directory or a relative path - path added.
+;
+
+; Include forcefield parameters
+#include "/home/565/tm3124/cyt-c-charmm/ff/charmm36-jul2020.ff/forcefield.itp"
+#include "/home/565/tm3124/cyt-c-charmm/ff/c4mim.prm"
+#include "/home/565/tm3124/cyt-c-charmm/ff/dhp.prm"
+#include "/home/565/tm3124/cyt-c-charmm/ff/dhc.prm"
+
+; Include chain topologies
+#include "/home/565/tm3124/cyt-c-charmm/ff/topol_Protein_chain_A.itp"
+#include "/home/565/tm3124/cyt-c-charmm/ff/topol_Other_chain_A2.itp"
+
+#include "/home/565/tm3124/cyt-c-charmm/ff/c4mim.itp"
+#include "/home/565/tm3124/cyt-c-charmm/ff/ch.itp"
+#include "/home/565/tm3124/cyt-c-charmm/ff/ac.itp"
+#include "/home/565/tm3124/cyt-c-charmm/ff/dhp.itp"
+#include "/home/565/tm3124/cyt-c-charmm/ff/dhc.itp"
+#include "/home/565/tm3124/cyt-c-charmm/ff/dbp.itp"
+#include "/home/565/tm3124/cyt-c-charmm/ff/mes.itp"
+
+#include "/home/565/tm3124/cyt-c-charmm/ff/charmm36-jul2020.ff/tip3p.itp"
+
+[ system ]
+; Name
+Cyt C in IL with water
+
+[ molecules ]
+; Compound        #mols
+Protein_chain_A     1
+Other_chain_A2      1
